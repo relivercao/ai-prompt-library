@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🤖 AI OPENCLAW | OpenClaw 白嫖攻略</title>
+    <title>🤖 AI OPENCLAW | 春节祝福服务</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --gold: #ffd700; --red: #c41e3a; --red-dark: #8b0000; }
@@ -16,11 +16,7 @@
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 700px; margin: 0 auto; padding: 20px; }
         h1 {
             font-size: clamp(28px, 7vw, 48px);
             text-align: center;
@@ -28,14 +24,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 20px 0;
-            filter: drop-shadow(0 0 20px rgba(255,150,0,0.8));
         }
-        .subtitle {
-            font-size: clamp(16px, 4vw, 24px);
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        .subtitle { font-size: clamp(14px, 3.5vw, 20px); color: var(--gold); text-align: center; margin-bottom: 25px; }
+        
         .hero-box {
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(60,0,0,0.7));
             border: 2px solid var(--gold);
@@ -44,112 +35,48 @@
             margin: 25px 0;
             text-align: center;
         }
-        .hero-title {
-            font-size: clamp(22px, 5vw, 32px);
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-        .ai-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            color: #8b0000;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .section {
-            background: rgba(0,0,0,0.5);
-            border-radius: 15px;
+        
+        .service-card {
+            background: linear-gradient(135deg, rgba(139,0,0,0.8), rgba(196,30,58,0.9));
+            border: 3px solid var(--gold);
+            border-radius: 16px;
             padding: 25px;
             margin: 20px 0;
         }
-        .section h2 {
-            color: var(--gold);
-            font-size: 20px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255,215,0,0.3);
-            padding-bottom: 10px;
-        }
-        .step {
-            display: flex;
-            align-items: center;
-            margin: 15px 0;
-            padding: 15px;
-            background: rgba(255,215,0,0.1);
-            border-radius: 10px;
-        }
-        .step-num {
-            background: var(--gold);
-            color: #8b0000;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        .step-content { flex: 1; }
-        .highlight {
-            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,140,0,0.2));
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            border: 1px solid var(--gold);
-        }
-        .highlight-title {
-            color: var(--gold);
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .price {
-            font-size: 36px;
-            color: var(--gold);
-            font-weight: bold;
-        }
-        .price-original {
-            font-size: 18px;
-            color: #999;
-            text-decoration: line-through;
-        }
-        .cta-btn {
+        .service-title { color: var(--gold); font-size: 22px; margin-bottom: 15px; text-align: center; }
+        .service-desc { font-size: 16px; margin-bottom: 15px; line-height: 1.6; }
+        .price { font-size: 32px; color: var(--gold); font-weight: bold; }
+        .price-original { font-size: 16px; color: #999; text-decoration: line-through; margin-left: 10px; }
+        
+        .btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--gold), #ff8c00);
             color: #8b0000;
-            padding: 15px 40px;
+            padding: 14px 35px;
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             text-decoration: none;
-            margin: 15px 0;
+            margin: 10px 5px;
             cursor: pointer;
             border: none;
         }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin: 15px 0;
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
         }
-        .feature {
-            background: rgba(0,0,0,0.4);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-        }
+        
+        .step { display: flex; align-items: center; margin: 12px 0; padding: 12px; background: rgba(255,215,0,0.1); border-radius: 10px; }
+        .step-num { background: var(--gold); color: #8b0000; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px; flex-shrink: 0; }
+        
+        .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+        .feature { background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center; }
         .feature-icon { font-size: 28px; }
-        .feature-text { font-size: 14px; margin-top: 5px; }
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: rgba(255,255,255,0.6);
-            font-size: 14px;
-        }
-        .decor { position: fixed; font-size: 30px; opacity: 0.6; animation: float 3s infinite; }
+        
+        .footer { text-align: center; padding: 30px; color: rgba(255,255,255,0.6); font-size: 14px; }
+        .decor { position: fixed; font-size: 28px; opacity: 0.6; animation: float 3s infinite; }
         @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-15px)} }
     </style>
 </head>
@@ -160,104 +87,64 @@
     <div class="decor" style="bottom:10%;right:5%">💰</div>
     
     <div class="container">
-        <h1>🤖 AI OPENCLAW</h1>
-        <p class="subtitle">🧧 春节限定 | 0元部署攻略 🧧</p>
+        <h1>🤖 AI 春节祝福服务</h1>
+        <p class="subtitle">🧧 定制祝福 · AI赋能 · 马年吉祥 🐴</p>
         
         <div class="hero-box">
-            <div class="ai-badge">🤖 AI OPENCLAW</div>
-            <p style="font-size: 18px; margin: 15px 0;">你的私人AI助手</p>
-            <p>让 OpenClaw 帮你做事，24小时在线！</p>
+            <p style="font-size:18px; margin:15px 0;">用AI定制专属祝福</p>
+            <p style="color:#ccc;">让祝福更有心意，让拜年更有创意</p>
         </div>
         
-        <div class="section">
-            <h2>📍 问题来了</h2>
-            <p>不想用自己电脑部署 OpenClaw，还想让它是 24 小时在线，也不想多花一毛钱单独购买台机器。怎么办？</p>
-        </div>
-        
-        <div class="highlight">
-            <div class="highlight-title">🎁 答案：百度云轻量应用服务器</div>
-            <div class="price">0.01元 <span class="price-original">99元</span></div>
-            <p style="margin: 10px 0; color: #ccc;">点击下方"立即购买"享此优惠</p>
-        </div>
-        
-        <div class="section">
-            <h2>🚀 部署步骤</h2>
-            
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                    <strong>下载百度 App</strong>
-                    <p style="font-size:14px; color:#ccc;">在手机应用商店搜索下载百度App</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                    <strong>搜索 @openclaw</strong>
-                    <p style="font-size:14px; color:#ccc;">打开百度App，在搜索框输入 @openclaw</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                    <strong>点击立即部署</strong>
-                    <p style="font-size:14px; color:#ccc;">进入页面后点击"立即部署"按钮</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-num">4</div>
-                <div class="step-content">
-                    <strong>等待1-3分钟</strong>
-                    <p style="font-size:14px; color:#ccc;">系统自动部署，稍等片刻</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-num">5</div>
-                <div class="step-content">
-                    <strong>开始使用</strong>
-                    <p style="font-size:14px; color:#ccc;">部署成功，开始让AI帮你做事！</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>✨ OpenClaw 能做什么</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <div class="feature-icon">💬</div>
-                    <div class="feature-text">智能对话</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📅</div>
-                    <div class="feature-text">日程管理</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🔔</div>
-                    <div class="feature-text">自动提醒</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🤖</div>
-                    <div class="feature-text">AI 自动化</div>
-                </div>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin: 30px 0;">
-            <button class="cta-btn" onclick="alert('请在百度App搜索 @openclaw 进行部署')">
-                🎯 立即免费部署
-            </button>
-            <p style="font-size: 12px; color: #999; margin-top: 10px;">
-                * 需下载百度App操作
+        <div class="service-card">
+            <div class="service-title">🎊 新春祝福套餐</div>
+            <p class="service-desc">
+                • AI定制祝福文案<br>
+                • 新年/元宵/开工吉日<br>
+                • 朋友圈/小红书模板<br>
+                • 永久更新
             </p>
+            <div class="price">¥9.9 <span class="price-original">¥99</span></div>
+            <div style="text-align:center; margin-top:15px;">
+                <a href="https://relivercao.github.io/spring-greeting-generator/" class="btn">🧧 立即获取祝福</a>
+            </div>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-title">🚀 定制祝福服务</div>
+            <p class="service-desc">
+                • 针对个人/企业定制<br>
+                • 品牌元素融入<br>
+                • 专属祝福语创作
+            </p>
+            <div class="price">¥99起</div>
+            <div style="text-align:center; margin-top:15px;">
+                <button class="btn btn-outline" onclick="alert('请联系客服定制')">✉️ 联系我们</button>
+            </div>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-title">☁️ 免费部署 OpenClaw</div>
+            <p style="font-size:14px; color:#ccc; margin-bottom:15px;">百度云轻量服务器 0.01元/1年</p>
+            
+            <div class="step"><div class="step-num">1</div><div>下载百度App</div></div>
+            <div class="step"><div class="step-num">2</div><div>搜索 @openclaw</div></div>
+            <div class="step"><div class="step-num">3</div><div>点击部署</div></div>
+            
+            <div style="text-align:center; margin-top:15px;">
+                <button class="btn btn-outline" onclick="alert('百度App搜索 @openclaw')">🔗 了解更多</button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature"><div class="feature-icon">💬</div><div>AI对话</div></div>
+            <div class="feature"><div class="feature-icon">📅</div><div>日程提醒</div></div>
+            <div class="feature"><div class="feature-icon">🤖</div><div>自动化</div></div>
+            <div class="feature"><div class="feature-icon">✍️</div><div>内容创作</div></div>
         </div>
         
         <div class="footer">
             <p>🧧 祝您新年快乐 · 马年吉祥 🐴</p>
-            <p>Powered by OPENCLAW</p>
+            <p>🤖 Powered by OPENCLAW</p>
         </div>
     </div>
 </body>
